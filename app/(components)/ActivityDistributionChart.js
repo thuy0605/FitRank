@@ -23,16 +23,16 @@ const ActivityDistributionChart = ({ fitnessHistory }) => {
       {
         data: data,
         backgroundColor: [
-          "rgba(255, 99, 132, 0.6)",
-          "rgba(54, 162, 235, 0.6)",
-          "rgba(255, 206, 86, 0.6)",
+          "rgba(245, 40, 145, 0.8)",
+          "rgba(75, 192, 192, 0.6)",
+          "rgba(56, 39, 245, 0.8)",
           "rgba(75, 192, 192, 0.6)",
           "rgba(153, 102, 255, 0.6)",
         ],
         hoverBackgroundColor: [
-          "rgba(255, 99, 132, 0.8)",
-          "rgba(54, 162, 235, 0.8)",
-          "rgba(255, 206, 86, 0.8)",
+          "rgba(245, 40, 145, 1)",
+          "rgba(75, 192, 192, 1)",
+          "rgba(56, 39, 245, 1)",
           "rgba(75, 192, 192, 0.8)",
           "rgba(153, 102, 255, 0.8)",
         ],
@@ -43,11 +43,25 @@ const ActivityDistributionChart = ({ fitnessHistory }) => {
   const options = {
     responsive: true,
     maintainAspectRatio: true,
+    plugins: {
+      legend: {
+        position: 'top',
+        labels: {
+          boxWidth: 20, // Reduce the legend's box width if possible
+          font: {
+            size: 15 // Set your desired size here
+          },
+          padding: 10 // Reduce padding to fit labels in one line
+        }
+      }
+    }
   };
-
+  
+  
   return (
-    <div>
-      <h2>Activity Distribution in Last 30 Days</h2>
+    <div className="mx-4">
+      <h3 className="flex justify-center text-sm py-4">Activity Distribution in Last 30 Days</h3>
+
       <Doughnut data={chartData} options={options} />
     </div>
   );

@@ -9,10 +9,12 @@ import {
   Paper,
   Divider,
   Typography,
+  TextField,
 } from "@mui/material";
 
 const Leaderboard = ({ initialData }) => {
   const [leaderboardData, setLeaderboardData] = useState(initialData);
+  const [usernameFilter, setUsernameFilter] = useState("");
 
   // Simulate real-time updates every 5 seconds
   useEffect(() => {
@@ -64,6 +66,11 @@ const Leaderboard = ({ initialData }) => {
   }, []);
 
   const renderLeaderboard = (leaderboard) => {
+    // Filter the leaderboard data based on the username filter
+    const filteredLeaderboard = leaderboard.filter((user) =>
+      user.username.toLowerCase().includes(usernameFilter.toLowerCase())
+    );
+
     return (
       <Table>
         <TableHead>
@@ -75,7 +82,7 @@ const Leaderboard = ({ initialData }) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {leaderboard.map((user) => (
+          {filteredLeaderboard.map((user) => (
             <TableRow key={user.username}>
               <TableCell>{user.username}</TableCell>
               <TableCell>
@@ -100,6 +107,17 @@ const Leaderboard = ({ initialData }) => {
         <Typography variant="h5" component="div">
           Pace Leaderboard
         </Typography>
+        <div className="">
+          <TextField
+            label="Filter by username"
+            variant="outlined"
+            value={usernameFilter}
+            onChange={(e) => setUsernameFilter(e.target.value)}
+            size="small"
+            margin="normal"
+            style={{ width: '100px'}}
+          />
+        </div>
         {renderLeaderboard(leaderboardData.paceBoardLeader.leaderBoard)}
       </Paper>
 

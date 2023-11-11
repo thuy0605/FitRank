@@ -66,31 +66,43 @@ const CaloriesBurnedChart = ({ fitnessHistory }) => {
         },
       },
       x: {
+        ticks: {
+          maxRotation: 45, // or any angle you prefer
+          minRotation: 45,  // making minRotation the same as maxRotation forces a fixed angle
+          font: {
+            size: 10 // Set this to the size you want
+          }
+        },
         title: {
           display: true,
-          text: "Date",
+          text: 'Date',
+
         },
       },
     },
   };
 
+  
+
   return (
-    <div>
-      <h2>Calories Burned by Activity</h2>
+    <div className="mx-4">
+      <h2 className="flex justify-center text-sm py-4">Calories Burned by Activity</h2>
       <div>
-        <label>Start Date:</label>
+        <label className="block text-xxs">Start Date:</label>
         <input
           type="date"
           value={startDate}
           onChange={(e) => setStartDate(e.target.value)}
+          className="bg-gray-200 rounded pl-2 w-32 my-1"
         />
       </div>
       <div>
-        <label>End Date:</label>
+        <label className="block text-xxs">End Date:</label>
         <input
           type="date"
           value={endDate}
           onChange={(e) => setEndDate(e.target.value)}
+          className="bg-gray-200 rounded pl-2 w-32 my-1 "
         />
       </div>
       <Line data={chartData} options={options} />
