@@ -1,0 +1,336 @@
+{
+  "_id": "6092a67f1109db001eac65e3",
+  "username": "jane_smith",
+  "firstname": "Jane",
+  "lastname": "Smith",
+  "country": "United States",
+  "age": 28,
+  "gender": "female",
+  "weight": 65.8,
+  "height": 167.5,
+  "usertype": "regular",
+  "location": {
+    "latitude": 34.0522,
+    "longitude": -118.2437
+  },
+  "dailyActiveGoal": 2.5,
+  "weeklyActiveGoal": 12.5,
+  "dailyCaloriesBurnGoal": 1000,
+  "fitnessHistory": [
+    {
+      "date": "2023-10-10",
+      "activeInfo": {
+        "activeTime": 2.75,
+        "choosenActivity": [
+          {
+            "activityName": "run",
+            "distance": 5200,
+            "duration": 32,
+            "caloriesBurned": 420,
+            "pace": 9.6
+          }
+        ]
+      }
+    },
+    {
+      "date": "2023-10-11",
+      "activeInfo": {
+        "activeTime": 2.9,
+        "choosenActivity": [
+          {
+            "activityName": "swim",
+            "distance": 1600,
+            "duration": 62,
+            "caloriesBurned": 530,
+            "pace": 2.58
+          }
+        ]
+      }
+    },
+    {
+      "date": "2023-10-12",
+      "activeInfo": {
+        "activeTime": 2.8,
+        "choosenActivity": [
+          {
+            "activityName": "run",
+            "distance": 5000,
+            "duration": 30,
+            "caloriesBurned": 400,
+            "pace": 10.0
+          }
+        ]
+      }
+    },
+    {
+      "date": "2023-10-13",
+      "activeInfo": {
+        "activeTime": 3.1,
+        "choosenActivity": [
+          {
+            "activityName": "bike",
+            "distance": 10000,
+            "duration": 45,
+            "caloriesBurned": 800,
+            "pace": 13.33
+          }
+        ]
+      }
+    },
+    {
+      "date": "2023-10-14",
+      "activeInfo": {
+        "activeTime": 2.6,
+        "choosenActivity": [
+          {
+            "activityName": "swim",
+            "distance": 1800,
+            "duration": 70,
+            "caloriesBurned": 600,
+            "pace": 2.57
+          }
+        ]
+      }
+    },
+    {
+      "date": "2023-10-15",
+      "activeInfo": {
+        "activeTime": 2.7,
+        "choosenActivity": [
+          {
+            "activityName": "run",
+            "distance": 4800,
+            "duration": 28,
+            "caloriesBurned": 380,
+            "pace": 8.57
+          }
+        ]
+      }
+    },
+    {
+      "date": "2023-10-16",
+      "activeInfo": {
+        "activeTime": 2.9,
+        "choosenActivity": [
+          {
+            "activityName": "bike",
+            "distance": 8000,
+            "duration": 40,
+            "caloriesBurned": 700,
+            "pace": 12.0
+          }
+        ]
+      }
+    },
+    {
+      "date": "2023-10-17",
+      "activeInfo": {
+        "activeTime": 3.2,
+        "choosenActivity": [
+          {
+            "activityName": "swim",
+            "distance": 2000,
+            "duration": 80,
+            "caloriesBurned": 700,
+            "pace": 2.5
+          }
+        ]
+      }
+    },
+    {
+      "date": "2023-10-18",
+      "activeInfo": {
+        "activeTime": 2.8,
+        "choosenActivity": [
+          {
+            "activityName": "run",
+            "distance": 5400,
+            "duration": 33,
+            "caloriesBurned": 450,
+            "pace": 9.09
+          }
+        ]
+      }
+    },
+    {
+      "date": "2023-10-19",
+      "activeInfo": {
+        "activeTime": 3.0,
+        "choosenActivity": [
+          {
+            "activityName": "bike",
+            "distance": 9000,
+            "duration": 42,
+            "caloriesBurned": 750,
+            "pace": 12.86
+          }
+        ]
+      }
+    },
+    {
+      "date": "2023-10-20",
+      "activeInfo": {
+        "activeTime": 2.7,
+        "choosenActivity": [
+          {
+            "activityName": "swim",
+            "distance": 1700,
+            "duration": 65,
+            "caloriesBurned": 620,
+            "pace": 2.62
+          }
+        ]
+      }
+    },
+    {
+      "date": "2023-10-21",
+      "activeInfo": {
+        "activeTime": 2.5,
+        "choosenActivity": [
+          {
+            "activityName": "run",
+            "distance": 4800,
+            "duration": 28,
+            "caloriesBurned": 380,
+            "pace": 8.57
+          }
+        ]
+      }
+    },
+    {
+      "date": "2023-10-22",
+      "activeInfo": {
+        "activeTime": 3.1,
+        "choosenActivity": [
+          {
+            "activityName": "bike",
+            "distance": 11000,
+            "duration": 50,
+            "caloriesBurned": 850,
+            "pace": 13.2
+          }
+        ]
+      }
+    },
+    {
+      "date": "2023-10-23",
+      "activeInfo": {
+        "activeTime": 2.8,
+        "choosenActivity": [
+          {
+            "activityName": "swim",
+            "distance": 1900,
+            "duration": 75,
+            "caloriesBurned": 650,
+            "pace": 2.53
+          }
+        ]
+      }
+    },
+    {
+      "date": "2023-10-24",
+      "activeInfo": {
+        "activeTime": 2.6,
+        "choosenActivity": [
+          {
+            "activityName": "run",
+            "distance": 4600,
+            "duration": 27,
+            "caloriesBurned": 370,
+            "pace": 8.89
+          }
+        ]
+      }
+    },
+    {
+      "date": "2023-10-25",
+      "activeInfo": {
+        "activeTime": 2.9,
+        "choosenActivity": [
+          {
+            "activityName": "bike",
+            "distance": 9500,
+            "duration": 44,
+            "caloriesBurned": 780,
+            "pace": 12.27
+          }
+        ]
+      }
+    },
+    {
+      "date": "2023-10-26",
+      "activeInfo": {
+        "activeTime": 3.2,
+        "choosenActivity": [
+          {
+            "activityName": "swim",
+            "distance": 2200,
+            "duration": 85,
+            "caloriesBurned": 750,
+            "pace": 2.35
+          }
+        ]
+      }
+    },
+    {
+      "date": "2023-10-27",
+      "activeInfo": {
+        "activeTime": 2.7,
+        "choosenActivity": [
+          {
+            "activityName": "run",
+            "distance": 5000,
+            "duration": 30,
+            "caloriesBurned": 400,
+            "pace": 10.0
+          }
+        ]
+      }
+    },
+    {
+      "date": "2023-10-28",
+      "activeInfo": {
+        "activeTime": 2.8,
+        "choosenActivity": [
+          {
+            "activityName": "bike",
+            "distance": 8800,
+            "duration": 41,
+            "caloriesBurned": 730,
+            "pace": 12.68
+          }
+        ]
+      }
+    },
+    {
+      "date": "2023-10-29",
+      "activeInfo": {
+        "activeTime": 2.5,
+        "choosenActivity": [
+          {
+            "activityName": "swim",
+            "distance": 1500,
+            "duration": 60,
+            "caloriesBurned": 500,
+            "pace": 2.5
+          }
+        ]
+      }
+    },
+    {
+      "date": "2023-10-30",
+      "activeInfo": {
+        "activeTime": 3.0,
+        "choosenActivity": [
+          {
+            "activityName": "run",
+            "distance": 5500,
+            "duration": 35,
+            "caloriesBurned": 450,
+            "pace": 8.57
+          }
+        ]
+      }
+    }
+  ]
+}
