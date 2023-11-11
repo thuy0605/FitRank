@@ -34,7 +34,7 @@ router.post('/login', function(req, res) {
           return res.status(httpStatus.UNAUTHORIZED).send({ auth: false, token: null });
         }
       } else {
-        const message = `User not found (email: ${req.body.email})`
+        const message = `User not found (username: ${req.body.username})`
         return res.status(httpStatus.NOT_FOUND).send({ auth: false, error: message });
       }
     }
