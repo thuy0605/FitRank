@@ -1,0 +1,36 @@
+{
+  "paceBoardLeader": {
+    "activityName": "Running",
+    "leaderBoard": [
+      {
+        "username": "john_doe",
+        "averagePaceDaily": 8.5,
+        "averagePaceWeekly": 8.2,
+        "averagePaceMonthly": 7.8
+      },
+      {
+        "username": "jane_smith",
+        "averagePaceDaily": 9.0,
+        "averagePaceWeekly": 8.7,
+        "averagePaceMonthly": 8.3
+      }
+    ]
+  },
+  "distanceBoardLeader": {
+    "activityName": "Running",
+    "leaderBoard": [
+      {
+        "username": "john_doe",
+        "averageDistanceDaily": 5.0,
+        "averageDistanceWeekly": 35.0,
+        "averageDistanceMonthly": 150.0
+      },
+      {
+        "username": "jane_smith",
+        "averageDistanceDaily": 4.5,
+        "averageDistanceWeekly": 31.5,
+        "averageDistanceMonthly": 135.0
+      }
+    ]
+  }
+}
