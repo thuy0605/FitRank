@@ -10,9 +10,10 @@ import {
   Divider,
   Typography,
   TextField,
+  LinearProgress
 } from "@mui/material";
 
-const Leaderboard = ({ initialData }) => {
+export function Leaderboard({ initialData }) {
   const [leaderboardData, setLeaderboardData] = useState(initialData);
   const [usernameFilter, setUsernameFilter] = useState("");
 
@@ -154,5 +155,3 @@ const Leaderboard = ({ initialData }) => {
     </div>
   );
 };
-
-export default Leaderboard;

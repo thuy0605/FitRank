@@ -1,4 +1,4 @@
-import Leaderboard from "../(components)/Leaderboard";
+import { Leaderboard } from "@/app/(components)/Leaderboard";
 
 export default async function LeaderboardPage() {
   const leaderboardData = JSON.parse(

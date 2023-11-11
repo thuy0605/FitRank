@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Line } from "react-chartjs-2";
 
-const CaloriesBurnedChart = ({ fitnessHistory }) => {
+export function CaloriesBurnedChart({ fitnessHistory }) {
   const [startDate, setStartDate] = useState(""); // Start date for filter
   const [endDate, setEndDate] = useState(""); // End date for filter
 
@@ -109,5 +109,3 @@ const CaloriesBurnedChart = ({ fitnessHistory }) => {
     </div>
   );
 };
-
-export default CaloriesBurnedChart;

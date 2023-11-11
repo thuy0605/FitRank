@@ -1,8 +1,6 @@
-"use client";
 export default function Login() {
   return (
-    <div className="bg-red-200 flex flex-col justify-center items-center">
-      <h1>Login component</h1>
+    <div className="flex flex-col justify-center items-center">
       <div className=" w-1/4">
         <label className="font-semibold text-sm text-gray-600 pb-1 block">
           Username
@@ -22,7 +20,7 @@ export default function Login() {
         />
       </div>
       <div className=" w-1/4">
-        <button className="bg-violet-700  hover:bg-violet-400 active:bg-violet-600 border rounded-lg px-3 py-2 mt-1 mb-5 w-full">
+        <button className="bg-blue-600 hover:bg-blue-400 active:bg-violet-600 border rounded-lg px-3 py-2 mt-1 mb-5 w-full">
           Login
         </button>
       </div>
