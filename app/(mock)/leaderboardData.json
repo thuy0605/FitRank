@@ -22,14 +22,14 @@
       {
         "username": "john_doe",
         "averageDistanceDaily": 5.0,
-        "averageDistanceWeekly": 35.0,
-        "averageDistanceMonthly": 150.0
+        "averageDistanceWeekly": 6.0,
+        "averageDistanceMonthly": 7.0
       },
       {
         "username": "jane_smith",
         "averageDistanceDaily": 4.5,
-        "averageDistanceWeekly": 31.5,
-        "averageDistanceMonthly": 135.0
+        "averageDistanceWeekly": 5.5,
+        "averageDistanceMonthly": 6.5
       }
     ]
   }

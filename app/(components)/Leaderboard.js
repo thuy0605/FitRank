@@ -9,6 +9,7 @@ import {
   Paper,
   Divider,
   Typography,
+  LinearProgress,
 } from "@mui/material";
 
 const Leaderboard = ({ initialData }) => {
@@ -43,14 +44,14 @@ const Leaderboard = ({ initialData }) => {
             {
               username: "john_doe",
               averageDistanceDaily: 8.5,
-              averageDistanceWeekly: 60.5,
-              averageDistanceMonthly: 250.0,
+              averageDistanceWeekly: 9.5,
+              averageDistanceMonthly: 8.2,
             },
             {
               username: "jane_smith",
               averageDistanceDaily: 7.5,
-              averageDistanceWeekly: 52.5,
-              averageDistanceMonthly: 225.0,
+              averageDistanceWeekly: 9.2,
+              averageDistanceMonthly: 9,
             },
           ],
         },
@@ -79,13 +80,35 @@ const Leaderboard = ({ initialData }) => {
             <TableRow key={user.username}>
               <TableCell>{user.username}</TableCell>
               <TableCell>
-                {user.averagePaceDaily || user.averageDistanceDaily}
+                <LinearProgress
+                  value={
+                    (user.averagePaceDaily || user.averageDistanceDaily) * 10
+                  }
+                  valueBuffer={10}
+                  readOnly
+                  variant="buffer"
+                />
               </TableCell>
               <TableCell>
-                {user.averagePaceWeekly || user.averageDistanceWeekly}
+                <LinearProgress
+                  value={
+                    (user.averagePaceWeekly || user.averageDistanceWeekly) * 10
+                  }
+                  valueBuffer={10}
+                  readOnly
+                  variant="buffer"
+                />
               </TableCell>
               <TableCell>
-                {user.averagePaceMonthly || user.averageDistanceMonthly}
+                <LinearProgress
+                  value={
+                    (user.averagePaceMonthly || user.averageDistanceMonthly) *
+                    10
+                  }
+                  valueBuffer={10}
+                  readOnly
+                  variant="buffer"
+                />
               </TableCell>
             </TableRow>
           ))}
