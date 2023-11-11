@@ -1,0 +1,10 @@
+# dependencies
+/node_modules
+/coverage
+/private.key
+/public.key
+
+# IDE related
+.idea
+.DS_Store
+.env
