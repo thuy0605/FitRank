@@ -60,6 +60,7 @@ router.get('/leaderBoard/_pace/', verifyToken, async function (req, res,next){
           _id: "$username",
           gender: { $first: "$gender" },
           userType: { $first: "$usertype" },
+          location: {$first: "$location"},
           averagePaceLast7Days: {
             $avg: {
               $arrayElemAt: [
@@ -92,6 +93,7 @@ router.get('/leaderBoard/_pace/', verifyToken, async function (req, res,next){
           username: "$_id",
           gender: 1,
           userType: 1,
+          location: 1,
           averagePaceLast1Days: 1,
           averagePaceLast7Days: 1,
           averagePaceLast30Days: 1,
@@ -100,14 +102,21 @@ router.get('/leaderBoard/_pace/', verifyToken, async function (req, res,next){
 
     aggregationPipeline =  [...aggregationPipeline, ...paceLogicAggregate]
 
-    console.log(aggregationPipeline)
-
     let results = await User.aggregate(aggregationPipeline);
 
     const userDTO = {
       activityName: activityName,
       leaderBoard: [
       ]
+    }
+
+    if (radius) {
+      const user = await User.findById(req.userId, {location: 1})
+      if (user) {
+        results = results.filter((doc) => {
+          return isLocationInRadius(user.location, doc.location,  radius);
+        })
+      }
     }
 
     results.forEach(result => {
@@ -169,6 +178,7 @@ router.get('/leaderBoard/_distance/', verifyToken, async function (req, res,next
           _id: "$username",
           gender: { $first: "$gender" },
           userType: { $first: "$usertype" },
+          location: {$first: "$location"},
           averageDistanceLast7Days: {
             $avg: {
               $arrayElemAt: [
@@ -201,6 +211,7 @@ router.get('/leaderBoard/_distance/', verifyToken, async function (req, res,next
           username: "$_id",
           gender: 1,
           userType: 1,
+          location: 1,
           averageDistanceLast1Days: 1,
           averageDistanceLast7Days: 1,
           averageDistanceLast30Days: 1,
@@ -214,6 +225,15 @@ router.get('/leaderBoard/_distance/', verifyToken, async function (req, res,next
       activityName: activityName,
       leaderBoard: [
       ]
+    }
+
+    if (radius) {
+      const user = await User.findById(req.userId, {location: 1})
+      if (user) {
+        results = results.filter((doc) => {
+          return isLocationInRadius(user.location, doc.location,  radius);
+        })
+      }
     }
 
     results.forEach(result => {
@@ -248,17 +268,6 @@ const prepareMatchOperation = (gender, usertype, activityName, radius) =>{
   if (usertype) {
     matchStage.usertype = usertype;
   }
-
-  // if (radius) {
-  //   const user = await User.findById(req.userId, {location: 1})
-  //   matchStage.$expr = {
-  //     $function: {
-  //       body: isLocationInRadius.toString(),
-  //       args: [user.location, '$location', radius],
-  //       lang: 'js',
-  //     },
-  //   }
-  // }
 
   aggregationPipeline.push({ $match: matchStage })
 
