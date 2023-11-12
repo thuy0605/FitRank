@@ -45,24 +45,25 @@ export function ActivityDistributionChart({ fitnessHistory }) {
     maintainAspectRatio: true,
     plugins: {
       legend: {
-        position: 'top',
+        position: "top",
         labels: {
           boxWidth: 20, // Reduce the legend's box width if possible
           font: {
-            size: 15 // Set your desired size here
+            size: 15, // Set your desired size here
           },
-          padding: 10 // Reduce padding to fit labels in one line
-        }
-      }
-    }
+          padding: 10, // Reduce padding to fit labels in one line
+        },
+      },
+    },
   };
-  
-  
+
   return (
     <div className="mx-4">
-      <h3 className="flex justify-center text-sm py-4">Activity Distribution in Last 30 Days</h3>
+      <h3 className="flex justify-center text-sm py-4">
+        Activity Distribution in Last 30 Days
+      </h3>
 
       <Doughnut data={chartData} options={options} />
     </div>
   );
-};
+}

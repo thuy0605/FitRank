@@ -10,7 +10,7 @@ import {
   Divider,
   Typography,
   TextField,
-  LinearProgress
+  LinearProgress,
 } from "@mui/material";
 
 export function Leaderboard({ initialData }) {
@@ -21,43 +21,20 @@ export function Leaderboard({ initialData }) {
   useEffect(() => {
     const intervalId = setInterval(() => {
       // Simulate new data
-      const newData = {
-        paceBoardLeader: {
-          activityName: "Running",
-          leaderBoard: [
-            {
-              username: "john_doe",
-              averagePaceDaily: 7.8,
-              averagePaceWeekly: 7.5,
-              averagePaceMonthly: 7.2,
-            },
-            {
-              username: "jane_smith",
-              averagePaceDaily: 8.2,
-              averagePaceWeekly: 7.9,
-              averagePaceMonthly: 7.6,
-            },
-            // Add more users as needed
-          ],
+      const newData = [
+        {
+          username: "minhtran1",
+          averagePaceDaily: 7.8,
+          averagePaceWeekly: 7.5,
+          averagePaceMonthly: 7.2,
         },
-        distanceBoardLeader: {
-          activityName: "Running",
-          leaderBoard: [
-            {
-              username: "john_doe",
-              averageDistanceDaily: 8.5,
-              averageDistanceWeekly: 9.5,
-              averageDistanceMonthly: 8.2,
-            },
-            {
-              username: "jane_smith",
-              averageDistanceDaily: 7.5,
-              averageDistanceWeekly: 9.2,
-              averageDistanceMonthly: 9,
-            },
-          ],
+        {
+          username: "v1ahrk",
+          averagePaceDaily: 8.2,
+          averagePaceWeekly: 7.9,
+          averagePaceMonthly: 7.6,
         },
-      };
+      ];
 
       setLeaderboardData(newData);
     }, 5000);
@@ -138,20 +115,11 @@ export function Leaderboard({ initialData }) {
             onChange={(e) => setUsernameFilter(e.target.value)}
             size="small"
             margin="normal"
-            style={{ width: '100px'}}
+            style={{ width: "100px" }}
           />
         </div>
-        {renderLeaderboard(leaderboardData.paceBoardLeader.leaderBoard)}
-      </Paper>
-
-      <Divider />
-
-      <Paper>
-        <Typography variant="h5" component="div">
-          Distance Leaderboard
-        </Typography>
-        {renderLeaderboard(leaderboardData.distanceBoardLeader.leaderBoard)}
+        {renderLeaderboard(leaderboardData)}
       </Paper>
     </div>
   );
-};
+}
