@@ -4,7 +4,7 @@ import React from "react";
 import "chart.js/auto";
 import { Doughnut } from "react-chartjs-2";
 
-const ActivityDistributionChart = ({ fitnessHistory }) => {
+export function ActivityDistributionChart({ fitnessHistory }) {
   const activityCounts = {};
 
   fitnessHistory.forEach((entry) => {
@@ -66,5 +66,3 @@ const ActivityDistributionChart = ({ fitnessHistory }) => {
     </div>
   );
 };
-
-export default ActivityDistributionChart;
