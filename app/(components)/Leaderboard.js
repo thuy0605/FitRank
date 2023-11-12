@@ -19,22 +19,12 @@ export function Leaderboard({ initialData }) {
 
   // Simulate real-time updates every 5 seconds
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      // Simulate new data
-      const newData = [
-        {
-          username: "minhtran1",
-          averagePaceDaily: 7.8,
-          averagePaceWeekly: 7.5,
-          averagePaceMonthly: 7.2,
-        },
-        {
-          username: "v1ahrk",
-          averagePaceDaily: 8.2,
-          averagePaceWeekly: 7.9,
-          averagePaceMonthly: 7.6,
-        },
-      ];
+    const intervalId = setInterval(async () => {
+      const gender = 'male';
+      const usertype = 'regular';
+
+      const response = await fetch(`${process.env.NEXT_PUBLIC_URL ?? 'http://localhost:3000'}/api/leaderboard?username=minhtran1&gender=${gender}&usertype=${usertype}`)
+      const newData = (await response.json()).leaderBoard;
 
       setLeaderboardData(newData);
     }, 5000);
